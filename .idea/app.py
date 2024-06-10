@@ -10,9 +10,19 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://<17070006016@stu.yasar.edu.tr>:<Denizyaşar1>@denizserver.database.windows.net:1433/Denizserver?driver=ODBC+Driver+17+for+SQL+Server'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = '<your-email>@gmail.com'
+app.config['MAIL_PASSWORD'] = '<your-email-password>'
+app.config['MAIL_DEFAULT_SENDER'] = '<your-email>@gmail.com'
+
 
 db = SQLAlchemy(app)
 swagger = Swagger(app)
+mail = Mail(app)
+scheduler = BackgroundScheduler()
+scheduler.start()
 
 
 class Flight(db.Model):
