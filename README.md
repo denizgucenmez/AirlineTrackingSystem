@@ -5,5 +5,4 @@ Using Azure SQLDatabase and SQLServer services denizserver.database.windows.net
 API created by using flask with phyton app.py       
 templates folder includes all html templates      
 app.js includes the rest of it.    
-
-
+servera bağlantı ile ilgili problem yaşıyorum azure üzerinden server kurup oluşturduğum databaseyi bağladım server için gereken izinleri de verdim kendi ip adresimi de ekledim fakat hala bağlanamıyorum webde yeniyim hocam kusura bakmayın video çekemiyorum bu yüzden
